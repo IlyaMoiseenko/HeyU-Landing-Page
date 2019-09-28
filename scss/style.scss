@@ -1,0 +1,379 @@
+@import "_vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontFamily;
+}
+
+p {
+    font-size: $textSize;
+    color: $textColor;
+    font-weight: $textWeight;
+}
+
+h2 {
+    font-size: $titleSize;
+    color: $titleColor;
+    font-weight: $titleWeight;
+}
+
+hr {
+    margin-top: 184px;
+    margin-bottom: 82px;
+}
+
+.container {
+    width: 100%;
+    max-width: $container;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/* ===================================
+            Main Section
+====================================*/
+.main-section {
+    background-image: url(../img/Rectangle3.png);
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+
+    &__logo {
+        color: #fff;
+        font-size: 49.8px;
+        font-weight: 900;
+    }
+
+    &-nav {
+        text-transform: uppercase;
+        font-size: $textSize;
+
+        &__link {
+            color: #fff;
+            position: relative;
+            text-decoration: none;
+            margin-left: 80px;
+            padding: 5px 15px;
+            transition: .5s ease;
+            font-weight: $textWeight;
+
+            &::before {
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                border-radius: 5px;
+                z-index: 1;
+                transition: width .3s linear;
+            }
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                right: 0;
+                bottom: -5px;
+                border-radius: 5px;
+                z-index: 1;
+                transition: width .3s linear;
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+
+    &-text {
+        margin-top: 193px;
+
+        &__title {
+            font-size: 71.04px;
+            font-weight: 900;
+        }
+
+        &__subTitle {
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 24px;
+            margin-bottom: 101px;
+        }
+
+        &__button {
+            color: white;
+            text-decoration: none;
+            font-size: $textSize;
+            font-weight: 700;
+            transition: .5s ease;
+            padding: 13px 51px;
+            border-radius: 25px;
+        }
+
+        &__button:hover {
+            background-color: white;
+            color: #D90647;
+            text-shadow: 0px 10px 40px black;
+        }
+    }
+
+    &__img {
+        margin-top: 130.6px;
+    }
+}
+
+
+
+
+
+
+/* ===================================
+            functions
+====================================*/
+.functions-item {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+
+    img {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    &-images {
+        position: relative;
+        width: 45%;
+        height: 620px;
+
+        &__img {
+            position: absolute;
+        }
+
+        .img--one {
+            top: 80px;
+            left: 192px;
+        }
+
+        .img--two {
+            top: 0;
+            left: 0;
+        }
+
+        .img--first {
+            top: 80px;
+            right: 192px;
+        }
+
+        .img--second {
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &-inf {
+        width: 45%;
+        padding-top: 180px;
+
+        &__title {
+            padding-bottom: 15px;
+        }
+
+        &__text {
+            line-height: 1.5;
+        }
+    }
+}
+
+
+
+
+
+
+/* ===================================
+            People-mark
+====================================*/
+.people-mark {
+    margin-bottom: 155px;
+}
+
+.people-mark__title {
+    text-align: center;
+    margin-bottom: 125px;
+}
+
+.people-mark-comments {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+        width: 30%;
+
+        .item-text {
+            border: 2px solid lightgray;
+            padding: 30px 24px;
+            transition: .3s linear;
+
+            &:hover {
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+                transform: translate(0, -10px);
+                border: 2px solid #fff;
+            }
+
+            &__p {
+                line-height: 1.5;
+                font-style: italic;
+                margin-bottom: 21px;
+            }
+
+            &__link {
+                font-weight: 700;
+                text-decoration: none;
+                color: #D90647;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    background-color: #D90647;
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    border-radius: 5px;
+                    z-index: 1;
+                    transition: width .2s linear;
+                }
+
+                &:hover {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .item-author {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 11px;
+
+            &__name {
+                margin-left: 19px;
+                color: #363636;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* ===================================
+            opportunity
+====================================*/
+.opportunity {
+    background-image: url(../img/Rectangle4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &-item {
+            width: 21%;
+            line-height: 1.5;
+            color: #fff;
+
+            &__title {
+                font-size: 24px;
+                font-weight: 900;
+            }
+
+            &__text {
+                font-size: 16px;
+                color: #fff;
+                opacity: 0.6;
+                margin-bottom: 32px;
+            }
+        }
+
+        &-item--left {
+            text-align: right;
+        }
+    }
+}
+
+
+
+
+
+
+/* ===================================
+            footer
+====================================*/
+.footer__hr {
+    margin-top: 110px;
+    margin-bottom: 0;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 30px 0;
+
+    .footer-nav {
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &__link {
+            color: #363636;
+            margin-right: 80px;
+            text-decoration: none;
+        }
+    }
+
+    .footer-select {
+        padding: 10px 20px;
+        border-radius: 25px;
+        background-color: #F8F8F8;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: none;
+    }
+}
